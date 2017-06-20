@@ -41,11 +41,12 @@ observ_seq = [observations.index(d) for d in diff]
 # Train HMM using Baum-Welch algorithm.
 n_obs = len(observations)
 model = hmm.HMM(3, n_obs)
-model.train([observ_seq])
+model.train([observ_seq], n_iter=3)
 
 # Compute the most probable sequence of hidden states using Viterbi algorithm.
 pred_state_seq = model.viterbi(observ_seq)
 
 # Compute the accuracy of the prediction.
-# TODO: map hidden states
-# print("Accuracy: {}".format(accuracy_score(state_seq, pred_state_seq)))
+states = ['a', 's', 'p']
+print("Accuracy: {}".format(accuracy_score(state_seq, [states[p]
+                                           for p in pred_state_seq])))

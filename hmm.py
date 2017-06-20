@@ -193,8 +193,8 @@ class HMM:
             probabl_seq: a vector of length seq which contains the most
             probable sequence of states that generated seq.
         '''
-        delta = np.zeros((len(self.pi),len(seq)))
-        delta_arg = np.zeros((len(self.pi),len(seq)))
+        delta = np.zeros((len(seq), len(self.pi)))
+        delta_arg = np.zeros((len(seq), len(self.pi)))
         delta[0] = self.pi * self.B.T[seq[0]]
 
         for k in range(1, len(seq)):
@@ -205,11 +205,11 @@ class HMM:
                 np.argmax(self.A.T[j] * self.B[j][seq[k]] * delta[k-1])
                 for j in range(len(self.A))])
 
-        probabl_seq = np.zeros(len(seq))
+        probabl_seq = np.zeros(len(seq), dtype=np.int)
         probabl_seq[len(seq)-1] = np.argmax(delta[len(seq)-1])
 
         for i in range(len(seq)-1, 0, -1):
-            probabl_seq[i-1] = delta_arg[i][probabl_seq[i]]
+            probabl_seq[i-1] = int(delta_arg[i][probabl_seq[i]])
 
         return probabl_seq
 
