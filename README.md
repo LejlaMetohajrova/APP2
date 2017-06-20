@@ -14,3 +14,5 @@ Parametre HMM natrenujeme pomocou Baum-Welchovho algoritmu. Najpravdepodobnejsiu
 Lepsie by zrejme bolo natrenovat spojite HMM, kedze nase riesenie skonverguje do nuly.
 
 Accuracy mame vsak aj tak velmi vysoku pokial povieme, ze gps sa stale pohybovala autom. V nasich oznacenych datach je totizto 35790 merani pocas jazdy autom, 878 merani pocas chodze peso a len 460 merani ked gps stala.
+
+Spustame skript `gps.py` pomocou Python 3. Balicky, ktore pouzivame su `numpy` a `sklearn`.
