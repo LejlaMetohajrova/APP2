@@ -12,3 +12,5 @@ Oznacene data pouzijeme na vyhodnotenie uspesnosti natrenovaneho modelu.
 Parametre HMM natrenujeme pomocou Baum-Welchovho algoritmu. Najpravdepodobnejsiu sekvenciu skrytch stavov zratame pomocou Viterbiho algoritmu. Nasledne vyratame accuracy najpravdepodobnejsej sekvencie s pouzitim oznacenych dat.
 
 Lepsie by zrejme bolo natrenovat spojite HMM, kedze nase riesenie skonverguje do nuly.
+
+Accuracy mame vsak aj tak velmi vysoku pokial povieme, ze gps sa stale pohybovala autom. V nasich oznacenych datach je totizto 35790 merani pocas jazdy autom, 878 merani pocas chodze peso a len 460 merani ked gps stala.
