@@ -1,0 +1,1 @@
+# Spracovanie GPS trackov
