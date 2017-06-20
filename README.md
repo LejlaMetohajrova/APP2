@@ -4,7 +4,7 @@ Pre nas problem trenujeme diskretne HMM s 3 skrytymi stavmi, jeden pre pohyb aut
 Pozorovania vyjadrime ako rozdiely po sebe iducich poloh. Konkretne ako euklidovsku vzdialenost po sebe nasledujucich vektorov (latitude, longitude).
 Aby sme mali pozorovani konecne vela, zaokruhlime rozdiely na 3 desatinne miesta a vypocitame vysledny pocet roznych pozorovani podla dostupnych dat.
 
-## Lablovanie dat
+## Oznacovanie dat
 Data sme si zobrazili pomocou gpsvisualizer.com a oznacili jednotlive tracky pismenami 'a', 's' a 'p' analogicky ku stavom 'autom', 'stoji', 'peso'.
 Oznacene data pouzijeme na vyhodnotenie uspesnosti natrenovaneho modelu.
 
